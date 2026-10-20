@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dtx5phxmd2giu"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_c0w10"]
+radius = 0.4
+height = 1.8
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_05ht7"]
+radius = 0.4
+height = 1.8
+
+[node name="abo 7med yal3b" type="CharacterBody3D" unique_id=1827888886]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=476521715]
+mesh = SubResource("CapsuleMesh_c0w10")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1244735188]
+shape = SubResource("CapsuleShape3D_05ht7")

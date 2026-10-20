@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://dskx4yrr8hd6n"]
+
+[ext_resource type="PackedScene" uid="uid://dtx5phxmd2giu" path="res://objects/abo_7_med_yal_3b.tscn" id="1_nakqk"]
+[ext_resource type="Script" uid="uid://cy057mmcle8x8" path="res://scripts/abo_7_med_yal_3b.gd" id="2_2m8t1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c1sti"]
+albedo_color = Color(0.104303606, 0.3083897, 1.4439226e-07, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_05ht7"]
+size = Vector2(50, 50)
+orientation = 1
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c0w10"]
+size = Vector3(50, 1, 50)
+
+[node name="abo7med" type="Node3D" unique_id=1469454694]
+
+[node name="Floor" type="StaticBody3D" parent="." unique_id=1613362207]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=924365097]
+material_override = SubResource("StandardMaterial3D_c1sti")
+mesh = SubResource("QuadMesh_05ht7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=460081867]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.144, -0.5, 0.065)
+shape = SubResource("BoxShape3D_c0w10")
+
+[node name="abo 7med yal3b" parent="." unique_id=1827888886 instance=ExtResource("1_nakqk")]
+script = ExtResource("2_2m8t1")
+
+[node name="Camera3D" type="Camera3D" parent="abo 7med yal3b" unique_id=1670740785]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.034371674, 1.3685054, 1.9551549)
+fov = 120.955345
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1837068128]
+transform = Transform3D(0.9996463, 1.4546768e-11, 0.026594441, -0.026594073, 0.005269817, 0.9996324, -0.00014014784, -0.9999861, 0.005267953, -0.009337425, 10.066821, -0.08064604)
